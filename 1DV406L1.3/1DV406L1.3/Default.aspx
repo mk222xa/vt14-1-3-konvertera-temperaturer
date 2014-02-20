@@ -26,13 +26,15 @@
                     <asp:TextBox ID="secondTempTextBox" runat="server" TextMode="Number"></asp:TextBox>
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Fältet får inte vara tomt" ControlToValidate="secondTempTextBox"></asp:RequiredFieldValidator>
                     <asp:CompareValidator ID="CompareValidator2" runat="server" ErrorMessage="Måste vara ett heltal" ControlToValidate="secondTempTextBox" Type="Integer" Operator="DataTypeCheck"></asp:CompareValidator>
+                    <asp:CompareValidator ID="CompareValidator4" runat="server" ErrorMessage="Sluttemperaturen måste vara större än starttemperaturen" ControlToValidate="secondTempTextBox" ControlToCompare="firstTempTextBox" Operator="GreaterThan" Type="Integer" Display="Dynamic"></asp:CompareValidator>
                 </div>
                 <%--Increase steps --%>
                 <div id="tempIncrease">
                     <asp:Label ID="tempIncreaseLabel" runat="server" Text="Temperatursteg"></asp:Label>
                     <asp:TextBox ID="increaseTempTextBox" runat="server" TextMode="Number"></asp:TextBox>
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="Fältet får inte vara tomt" ControlToValidate="increaseTempTextBox"></asp:RequiredFieldValidator>
-                    <asp:CompareValidator ID="CompareValidator3" runat="server" ErrorMessage="CompareValidator" ControlToValidate="increaseTempTextBox" Type="Integer" Operator="DataTypeCheck"></asp:CompareValidator>
+                    <asp:CompareValidator ID="CompareValidator3" runat="server" ErrorMessage="Måste vara ett heltal" ControlToValidate="increaseTempTextBox" Type="Integer" Operator="DataTypeCheck"></asp:CompareValidator>
+                    <asp:RangeValidator ID="RangeValidator1" runat="server" ErrorMessage="Värdet måste vara mellan 1-100" MaximumValue="100" MinimumValue="1" ControlToValidate="increaseTempTextBox" Type="Integer" Display="Dynamic"></asp:RangeValidator>
                 </div>
                 <%--Conversion type buttons --%>
                 <div id="convertButtons">
