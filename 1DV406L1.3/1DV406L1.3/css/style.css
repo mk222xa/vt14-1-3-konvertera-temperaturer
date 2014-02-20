@@ -1,0 +1,34 @@
+﻿form {
+width:800px;
+clear:both;
+}
+
+h1 {
+text-align:center;
+}
+
+#firstTemp {
+display:block;
+clear:both;
+float:left;
+}
+#secondTemp {
+display:block;
+clear:both;
+float:left;
+}
+#tempIncrease {
+display:block;
+clear:both;
+float:left;
+}
+#convertButtons {
+display:block;
+clear:both;
+float:left;
+}
+#tableDiv {
+display:block;
+clear:both;
+background-color:#808080;
+}
